@@ -11,3 +11,8 @@
 # Python cache
 __pycache__/
 *.pyc
+
+# CatBoost
+catboost_info/
+notebooks/catboost_info/
+
