@@ -39,11 +39,13 @@ INTERNET_TYPE_MAP = {_norm(k): v for k, v in INTERNET_TYPE_CANONICAL.items()}
 class Model:
     def __init__(self, model_path: Optional[str] = None):
         if model_path is None:
+            # Use env in Docker so /flask-app/model_artifacts doesn't shadow this module
+            model_dir = os.environ.get("CHURN_MODEL_DIR", "model")
             model_path = os.path.abspath(
                 os.path.join(
                     os.path.dirname(__file__),
                     "..",
-                    "model",
+                    model_dir,
                     "final_model.pkl",
                 )
             )
