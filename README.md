@@ -1,4 +1,3 @@
-# jan26-p03
 Full Name : Hoe Chen Hou
 
 Website URL of Deployed web app : http://13.239.114.155/
